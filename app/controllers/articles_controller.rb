@@ -1,3 +1,4 @@
+# controller
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy]
 
@@ -20,14 +21,14 @@ class ArticlesController < ApplicationController
   def edit; end
 
   def update
-    # @article = Article.find(params[:id])
-    @article.update
+    @article.update(articles_params)
     redirect_to articles_path
   end
 
   def destroy
+    @article.destroy
+    redirect_to articles_path
   end
-
 
   private
 
@@ -38,5 +39,4 @@ class ArticlesController < ApplicationController
   def articles_params
     params.require(:article).permit(:title, :context)
   end
-
 end

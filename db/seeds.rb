@@ -4,10 +4,10 @@
 # Examples:
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+Article.delete_all
 10.times do
-  title = Faker::Artist.name
-  context = Faker::Quote.famous_last_words
+  title = Faker::Sports::Football.team
+  context = Faker::Books::Lovecraft.paragraph
   article = Article.new(title: title, context: context)
   article.save
 end

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'articles#index'
   # read all articles
   get '/articles',         to: 'articles#index',  as: :articles
   # create a article

@@ -1,0 +1,22 @@
+#navbar {
+  height: 40px;
+  background-color: rgb(232, 232, 232);
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(189, 189, 189);
+
+  a {
+    text-decoration: none;
+    color: rgb(100, 100, 100);
+  }
+
+  a:visited {
+    color: rgb(100, 100, 100);
+  }
+
+  a:hover {
+    color: rgb(45, 62, 100);
+  }
+}
